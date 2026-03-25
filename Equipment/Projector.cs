@@ -1,5 +1,4 @@
-namespace CW2.Equipment;
-
+namespace Project.Equipments;
 public class Projector : Equipment
 {
     public string Resolution { get; }

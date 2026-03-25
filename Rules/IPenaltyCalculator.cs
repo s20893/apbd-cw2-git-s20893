@@ -1,4 +1,4 @@
-namespace CW2.Rules;
+namespace Project.Rules;
 
 public interface IPenaltyCalculator
 {

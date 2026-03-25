@@ -1,9 +1,9 @@
-using CW2.Equipment;
-using CW2.Loan;
-using CW2.User;
 using System.Text;
+using Project.Equipments;
+using Project.Loans;
+using Project.Users;
 
-namespace CW2.Services;
+namespace Project.Services;
 
 public class ReportService
 {

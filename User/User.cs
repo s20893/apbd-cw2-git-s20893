@@ -1,4 +1,4 @@
-namespace CW2.User;
+namespace Project.Users;
 
 public abstract class User
 {

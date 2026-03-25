@@ -1,6 +1,6 @@
-using Project.Equipment;
-using Project.User;
-using Project.Loan;
+﻿using Project.Equipments;
+using Project.Users;
+using Project.Loans;
 using Project.Services;
 using Project.Rules;
 
@@ -15,8 +15,8 @@ public class Program
         LoanService loanService = new(new SimplePenaltyCalculator());
         ReportService reportService = new();
 
-        // LISTA USERÓW (prosto)
-        List<User.User> users = new();
+        // USERS
+        List<User> users = new();
 
         int equipmentId = 1;
         int userId = 1;
@@ -86,7 +86,7 @@ public class Program
         try
         {
             loanService.BorrowEquipment(loanId++, student, laptop2, 3);
-            loanService.BorrowEquipment(loanId++, student, projector, 3); // powinien wywalić błąd
+            loanService.BorrowEquipment(loanId++, student, projector, 3); // tu powinien być błąd
         }
         catch (Exception ex)
         {

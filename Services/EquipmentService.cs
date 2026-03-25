@@ -1,6 +1,6 @@
-using CW2.Equipment;
+using Project.Equipments;
 
-namespace CW2.Services;
+namespace Project.Services;
 
 public class EquipmentService
 {
@@ -18,17 +18,13 @@ public class EquipmentService
 
     public List<Equipment> GetAvailableEquipment()
     {
-        return _equipment
-            .Where(e => e.Status == EquipmentStatus.Available)
-            .ToList();
+        return _equipment.Where(e => e.Status == EquipmentStatus.Available).ToList();
     }
 
     public Equipment GetById(int id)
     {
-        Equipment equipment = _equipment.FirstOrDefault(e => e.Id == id)
-            ?? throw new InvalidOperationException("Equipment not found.");
-
-        return equipment;
+        return _equipment.FirstOrDefault(e => e.Id == id)
+               ?? throw new InvalidOperationException("Equipment not found.");
     }
 
     public void MarkAsUnavailable(int id)

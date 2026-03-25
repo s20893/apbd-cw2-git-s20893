@@ -1,4 +1,4 @@
-namespace CW2.Equipment;
+namespace Project.Equipments;
 
 public enum EquipmentStatus
 {

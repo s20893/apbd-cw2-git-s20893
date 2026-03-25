@@ -1,7 +1,7 @@
-using CW2.User;
-using CW2.Equipment;
+using Project.Users;
+using Project.Equipments;
 
-namespace CW2.Loan;
+namespace Project.Loans;
 
 public class Loan
 {
@@ -26,8 +26,7 @@ public class Loan
 
     public bool IsActive => ReturnDate == null;
 
-    public bool IsOverdue =>
-        IsActive && DateTime.Now.Date > DueDate.Date;
+    public bool IsOverdue => IsActive && DateTime.Now.Date > DueDate.Date;
 
     public void Close(DateTime returnDate, decimal penalty)
     {
